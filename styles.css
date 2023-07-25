@@ -10,6 +10,10 @@ img {
   height: auto;
 }
 
+a {
+  color: white;
+}
+
 input, select, button, textarea {
   max-width: 100%;
 }
@@ -57,13 +61,15 @@ div#tswheader {
 }
 
 div#tswfooter {
+	position: relative;
+	bottom: 10px;
 }
 
 img {
   max-width: 200px;
 }
 
-div#aboutme {
+div .letter {
 	background-color: #265961;
 	color: #bce2e8;
 	padding: 10px;
@@ -74,4 +80,50 @@ div#aboutme {
 #logo {
 	border-radius: 100%;
 }
+
+/*
+	tswnavbar.css	1.2.4
+	Please use the Navigation Menu Wizard at
+		https://www.thesitewizard.com/wizards/css-menu-buttons.shtml
+	to generate your own customized menu buttons.
+*/
+
+#tswcssbuttons {
+	width: 90% ;
+	max-width: 100% ;
+	text-align: center ;
+}
+#tswcssbuttons ul {
+	margin: 0 ;
+	padding: 0 ;
+	list-style: none ;
+}
+#tswcssbuttons li {
+	margin: 0 ;
+	padding: 0 ;
+	display: block ;
+	list-style: none ;
+	font-family: Arial, Helvetica, sans-serif ;
+}
+#tswcssbuttons li a {
+	color: #265961 ;
+	background-color: #bce2e8 ;
+	border: 1px outset #ffffff ;
+	text-decoration: none ;
+	display: block ;
 	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#tswcssbuttons li a:hover {
+	color: #bce2e8 ;
+	background-color: #265961 ;
+}
+
+#sitemaplinks li a {
+	color: white;
+}
+
+#sitemaplinks li a:hover {
+	font-style: italic;
+}
