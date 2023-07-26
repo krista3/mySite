@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(150, 173, 166);
+    color: white;
+    text-align: center;
+}
+
+#report {
+    line-height: 200%;
+}
