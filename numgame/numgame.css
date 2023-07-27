@@ -7,3 +7,18 @@ body {
 #report {
     line-height: 200%;
 }
+
+#tswcssbuttons li a {
+	color: #265961 ;
+	background-color: #bce2e8 ;
+	border: 1px outset #ffffff ;
+	text-decoration: none ;
+	display: block ;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#tswcssbuttons li a:hover {
+	color: #bce2e8 ;
+	background-color: #265961 ;
+}
