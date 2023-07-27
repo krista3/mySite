@@ -9,9 +9,7 @@ let secret;
 
 function victory() {
     console.log("victory");
-    if (positionX < 200) {
-        positionX++;
-    }
+    guess.classList.add("victory");
 }
 
 function loadGame() {

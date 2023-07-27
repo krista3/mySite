@@ -8,6 +8,21 @@ body {
     line-height: 200%;
 }
 
+/* .victory {
+	animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+	next {transform:rotate(45deg); width:100px;}
+	next {transform:rotate(-360deg);}
+	100% {transform:rotate(0deg);}
+}  */
+
 #tswcssbuttons li a {
 	color: #265961 ;
 	background-color: #bce2e8 ;
