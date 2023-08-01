@@ -1,11 +1,12 @@
 class Paddle {
-    constructor(x, y, l, w, c) {
+    constructor(x, y, l, w, c, side) {
         this.x = x;
         this.y = y;
         this.vy = 0;
         this.l = l;
         this.w = w;
         this.c = c;
+        this.side = side;
     }
 
     draw(ctx) {
@@ -15,7 +16,17 @@ class Paddle {
 
         ctx.fillRect(this.x, this.y, this.w, this.l);
         ctx.strokeRect(this.x, this.y, this.w, this.l);
+
+        // const image = new Image();
+        // if (side) {
+        //     image.src = "land1.png";
+        //     ctx.drawImage(image, this.x, this.y, this.w, this.l);
+        // } else {
+        //     image.src = "land2.png";
+        //     ctx.drawImage(image, this.x, this.y, this.w, this.l);
+        // }
     }
+
 
     move() {
         // CODE HERE
@@ -50,6 +61,6 @@ class Paddle {
     }
 
     powerup() {
-        this.l += 20;
+        this.l = 150;
     }
 }

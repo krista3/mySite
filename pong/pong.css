@@ -1,6 +1,16 @@
 body {
     text-align: center;
+    background-image: url('oppenheimer.png');
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+/* #game {
+    background-color:black;
+    color: #cf8c26;
+    margin-left: 20%;
+    margin-right: 20%;
+} */
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
@@ -17,5 +27,7 @@ h1 {
     border-radius: 15px;
     width: 100px;
     height: 50px;
+    color: #000000;
+    background-color:#cf8c26;
     font-family: 'Courier New', Courier, monospace;
 }

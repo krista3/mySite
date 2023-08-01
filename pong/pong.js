@@ -31,16 +31,37 @@ function resetGame() {
 
 function resetPaddles() {
     // CODE HERE
-    paddleL = new Paddle(0, 0, paddleLength, paddleWidth, "red");
-    paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleLength, paddleWidth, "red");
+    paddleL = new Paddle(0, 0, paddleLength, paddleWidth, "red" , true);
+    paddleR = new Paddle(boardWidth-paddleWidth, 0, paddleLength, paddleWidth, "red", false);
 }
 
 function resetBall() {
-    ball = new Ball(boardWidth/2, boardHeight/2, 1, -1, ballRadius, "hotpink");
+    //Random init velocity
+    // 0.5<x<2, -2<x<-0.5
+    let horizontal = Math.random();
+    let vertical = Math.random();
+    let speedX = Math.random() + 1;
+    let speedY = Math.random() + 1;
+    let veloX;
+    let veloY;
+
+    if (horizontal >= 0.5){
+        veloX = speedX;
+    } else {
+        veloX = -1*speedX;
+    }
+    if (vertical >= 0.5){
+        veloY = speedY;
+    } else {
+        veloY = -1*speedY;
+    }
+    console.log(veloX, veloY);
+
+    ball = new Ball(boardWidth/2, boardHeight/2, veloX, veloY, ballRadius, "hotpink");
 }
 
 function clearBoard() {
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
     ctx.fillRect(0, 0, boardWidth, boardHeight);
 }
 
@@ -79,7 +100,10 @@ function nextTick() {
 function score(player) {
     if (player == "left") scoreL++;
     if (player == "right") scoreR++;
-    
+
+    nuke.pause();
+    nukeSoundPlay();
+
     updateScore();
     if (scoreL-scoreR >= 5){
         paddleR.powerup();
@@ -90,6 +114,12 @@ function score(player) {
         paddleL.l = paddleLength;
     }
     resetBall();
+}
+
+async  function nukeSoundPlay(){
+    let nuke = document.getElementById("nuke");
+
+    await nuke.play();
 }
 
 function updateScore() {
