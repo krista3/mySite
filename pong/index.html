@@ -16,10 +16,13 @@
         <br />
         <input type="checkbox" id="cpucheck">
         <label>CPU Play</label>
+    <div>
+        <p id="info">Press "d" and right arrow to be ready for the game</p>
+    </div>
     </div>
 
-    <audio controls autoplay hidden>
-        <source src="pongmusic.mp3", type="audio/mpeg">
+    <audio controls autoplay loop hidden id="bgmusic">
+        <source src="./pongmusic.mp3", type="audio/mpeg">
     </audio>
     <audio controls hidden id="contactsound">
         <source src="./explosion1.mp3", type="audio/mpeg">

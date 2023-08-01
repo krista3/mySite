@@ -10,21 +10,21 @@ class Paddle {
     }
 
     draw(ctx) {
-        // CODE HERE
-        ctx.fillStyle = this.c;
-        ctx.strokeStyle = "black";
+        // // CODE HERE
+        // ctx.fillStyle = this.c;
+        // ctx.strokeStyle = "black";
 
-        ctx.fillRect(this.x, this.y, this.w, this.l);
-        ctx.strokeRect(this.x, this.y, this.w, this.l);
+        // ctx.fillRect(this.x, this.y, this.w, this.l);
+        // ctx.strokeRect(this.x, this.y, this.w, this.l);
 
-        // const image = new Image();
-        // if (side) {
-        //     image.src = "land1.png";
-        //     ctx.drawImage(image, this.x, this.y, this.w, this.l);
-        // } else {
-        //     image.src = "land2.png";
-        //     ctx.drawImage(image, this.x, this.y, this.w, this.l);
-        // }
+        const image = new Image();
+        if (this.side) {
+            image.src = "land1.png";
+            ctx.drawImage(image, this.x, this.y, this.w, this.l);
+        } else {
+            image.src = "land2.png";
+            ctx.drawImage(image, this.x, this.y, this.w, this.l);
+        }
     }
 
 

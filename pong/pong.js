@@ -22,7 +22,8 @@ function resetGame() {
     gameboard.height = boardHeight;
     
     // CODE HERE
-
+    let bgmusic = document.getElementById(`bgmusic`);
+    bgmusic.load();
     resetBall();
     resetPaddles();
 
