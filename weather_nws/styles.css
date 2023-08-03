@@ -1,0 +1,10 @@
+body {
+    background-image: radial-gradient(circle, rgb(253, 151, 168), rgb(64, 167, 252));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    display: none;
+}
