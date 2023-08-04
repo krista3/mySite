@@ -29,7 +29,7 @@ class OWMGeocode {
         if (this.country !== null) {
             loc += `,${this.country}`;
         }
-        let URL = `http://api.openweathermap.org/geo/1.0/direct?q=${loc}&limit=${this.limit}&appid=${this.APIKEY}`;
+        let URL = `https://api.openweathermap.org/geo/1.0/direct?q=${loc}&limit=${this.limit}&appid=${this.APIKEY}`;
         xhttp.open("GET", URL, true);
         xhttp.send();
     }

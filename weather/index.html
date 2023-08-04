@@ -26,8 +26,19 @@
     
     <h2 id="location">LOCATION</h2>
     <p id="weather-report">WEATHER REPORT</p>
-    
+    <p id="air-pollution">AIR POLLUTION</p>
+
     <table id="forecast-table"></table>
+    
+    <h3>COMPARISON</h3>
+    <label>First City</label>
+    <input id="firstcity">
+    <label>Second City</label>
+    <input id="secondcity">
+    <button onclick="getFirstCoords()">COMPARE</button>
+    <p id="compare1"></p>
+    <p id="compare2"></p>
+    <p id="compare3"></p>
     
     <script src="./OWMGeocode.js"></script>
     <script src="./OWMForecast.js"></script>

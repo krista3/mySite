@@ -21,7 +21,7 @@ class OWMPollution {
                 callback();
             }
         }
-        let URL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${this.lat}&lon=${this.lon}&appid=${this.APIKEY}`;
+        let URL = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${this.lat}&lon=${this.lon}&appid=${this.APIKEY}`;
         xhttp.open("GET", URL, true);
         xhttp.send();
     }

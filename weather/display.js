@@ -119,5 +119,6 @@ function createRow(json) {
 ///////////////////////////////////////////////////////////////
 
 function displayPollution() {
-
+    const pol = document.getElementById("air-pollution");
+    pol.innerHTML = `${owmPollution.json.list[0].main.aqi} is the aqi.`;
 }
